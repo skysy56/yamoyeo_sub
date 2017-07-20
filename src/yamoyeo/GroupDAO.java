@@ -317,7 +317,7 @@ public class GroupDAO {
 		return list;
 	}
 
-	public ArrayList<GroupVO> searchMygroup(String user_id) { // 메인 화면에서 추천 모임
+	public ArrayList<GroupVO> searchMygroup(String user_id) { 
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;

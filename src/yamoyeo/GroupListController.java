@@ -28,15 +28,17 @@ public class GroupListController {
 
 		// Service
 		Service service = Service.getInstance();
-		ArrayList<GroupVO> list = service.searchGroups(user_id);
+		//내가 개설한 것
+		ArrayList<GroupVO> creategroup_list = service.searchMygroup(user_id); 
+		//내가 가입한 것 
+		ArrayList<GroupVO> joingroup_list = service.searchGroups(user_id);
 
-		// Output View
-		if (list == null) {
-			request.setAttribute("result", "가입된 모임이 없습니다.");
+		
+		for(int i = 0; i<creategroup_list.size(); i++){
+			request.setAttribute("creategroup"+i, creategroup_list.get(i));
 		}
-		for(int i = 0; i<list.size(); i++){
-			request.setAttribute("mygroup"+i, list.get(i));
-			System.out.println("mygroup 들 = " + list.get(i).getGroup_name());
+		for(int i = 0; i<joingroup_list.size(); i++){
+			request.setAttribute("joingroup"+i, joingroup_list.get(i));
 		}
 		HttpUtil.forward(request, response, "/view08_d.jsp");
 	}
