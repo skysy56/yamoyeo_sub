@@ -89,8 +89,8 @@ public class JoinDAO {
 		try {
 			System.out.println("user_id 를 받아왔어 = " + user_id);
 			conn = getConnection();
-			pstmt = conn.prepareStatement("select * from ya_group where group_id =(select group_id from ya_join where user_id= ?) ");
-			pstmt.setString(1, user_id); 
+			pstmt = conn.prepareStatement("select * from ya_group where group_id in (select group_id from ya_join where user_id= ?) ");
+			pstmt.setString(1, user_id);
 			
 			ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){

@@ -18,7 +18,7 @@ public class GroupListController {
 			throws ServletException, IOException { // 내 그룹 리스트 출력
 		// Parameter
 		String user_id = (String) session.getAttribute("user_id");
-		
+		System.out.println("현재 user_id = " + user_id);
 		// user 확인
 		if (user_id.isEmpty()) {
 			request.setAttribute("error", "로그인 해주세요.");
@@ -36,6 +36,7 @@ public class GroupListController {
 		}
 		for(int i = 0; i<list.size(); i++){
 			request.setAttribute("mygroup"+i, list.get(i));
+			System.out.println("mygroup 들 = " + list.get(i).getGroup_name());
 		}
 		HttpUtil.forward(request, response, "/view08_d.jsp");
 	}

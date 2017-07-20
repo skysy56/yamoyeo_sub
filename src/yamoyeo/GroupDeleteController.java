@@ -22,7 +22,7 @@ public class GroupDeleteController  {
 		service.deleteGroup(group_id);
 
 		// Output View 
-		HttpUtil.forward(request, response, "/view08_d.jsp");
+		HttpUtil.forward(request, response, "/searchMyGroup.do");
 
 	}
 
