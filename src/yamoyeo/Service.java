@@ -41,7 +41,7 @@ public class Service {
       return new GroupDAO().searchGroup(group_id);
    }
    
-   public ArrayList<GroupVO> searchMygroup(String user_id){ //내가 가입한 그룹조회 GroupSearchController "searchMygroup.do"
+   public ArrayList<GroupVO> searchMygroup(String user_id){ //내가 개설한 그룹조회 GroupSearchController "searchMygroup.do"
       return new GroupDAO().searchMygroup(user_id);
    }
    

@@ -80,7 +80,7 @@ public class JoinDAO {
 		
 	}
 	
-	public ArrayList<GroupVO> searchGroups(String user_id){ //groupVO list 리턴
+	public ArrayList<GroupVO> searchGroups(String user_id){ //groupVO list  리턴
 		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -172,7 +172,7 @@ public  int searchJoin(String group_id, String user_id){//그룹 가입여부 �
 			pstmt.setString(2, group_id); 
 			
 
-			ResultSet rs = pstmt.executeQuery();;
+			ResultSet rs = pstmt.executeQuery();
 			
 			if(rs.next()){
 				result = 1;

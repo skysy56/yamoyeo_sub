@@ -27,7 +27,7 @@ public class GroupDropController {
 		// Output View
 
 		System.out.println("포워드 전");
-		HttpUtil.forward(request, response, "/groupSearch.do");
+		HttpUtil.forward(request, response, "/groupList.do");
 
 	}
 

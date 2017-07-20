@@ -60,16 +60,19 @@ public class GroupSearchController {
 
 	@RequestMapping(value = "searchMygroup.do")
 	public String searchMygroup(HttpServletRequest request, HttpServletResponse response) {
+		System.out.println("searchMygroup에 안드러왔니?");
 		HttpSession session = request.getSession();
 		String user_id = (String) session.getAttribute("user_id");
 		ArrayList<GroupVO> list = null;
 		Service service = Service.getInstance();
+		System.out.println("찾으러 갑니다");
 		list = service.searchMygroup(user_id);
 
 		for (int i = 0; i < list.size(); i++) {
-			request.setAttribute("group" + i, list.get(i));
+			request.setAttribute("mygroup" + i, list.get(i));
+			System.out.println("지우고 난 후 mygroup들 = " + list.get(i));
 		}
-
+		System.out.println("뷰8 가기전");
 		return "view08_d";
 	}
 

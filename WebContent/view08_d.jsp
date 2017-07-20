@@ -120,7 +120,7 @@
 	</form>
 
 	
-	<form action="view08_d.jsp" method="post">
+	<form action="groupList.do" method="post">
 	<input type=submit id="groupadmin" class="btn btn-primary" value="&nbsp&nbsp&nbsp&nbsp모임 관리&nbsp&nbsp&nbsp&nbsp"/>
 	</form><p><hr><br/>
 	
@@ -139,33 +139,33 @@
 		<tbody>
 			<tr>
 			<form action="groupDelete.do" id="group_delete" method = "get">
-			<input type = hidden name = "group_id" value = "${mygroup0.group_id}">
-				<td>${mygroup0.group_name}</td>
-				<td>${mygroup0.interest}</td>
-				<td>${mygroup0.address}</td>
-				<td>${mygroup0.day}</td>
-				<td>${mygroup0.state}</td>
+			<input type = hidden name = "group_id" value = "${creategroup0.group_id}">
+				<td>${creategroup0.group_name}</td>
+				<td>${creategroup0.interest}</td>
+				<td>${creategroup0.address}</td>
+				<td>${creategroup0.day}</td>
+				<td>${creategroup0.state}</td>
 				<td><input type="submit" id="pdel" class="btn btn-primary" value="삭제하기"></td>
 			</form>	
 			</tr>					
 			<tr>
 			<form action="groupDelete.do" id="group_delete" method = "get">
-			<input type = hidden name = "group_id" value = "${mygroup1.group_id}">
-				<td>${mygroup1.group_name}</td>
-				<td>${mygroup1.interest}</td>
-				<td>${mygroup1.address}</td>
-				<td>${mygroup1.day}</td>
-				<td>${mygroup1.state}</td>
+			<input type = hidden name = "group_id" value = "${creategroup1.group_id}">
+				<td>${creategroup1.group_name}</td>
+				<td>${creategroup1.interest}</td>
+				<td>${creategroup1.address}</td>
+				<td>${creategroup1.day}</td>
+				<td>${creategroup1.state}</td>
 				<td><input type="submit" id="pdel" class="btn btn-primary" value="삭제하기"></td>
 			</form>	
 			</tr>	
 			<form action="groupDelete.do" id="group_delete" method = "get">
-			<input type = hidden name = "group_id" value = "${mygroup2.group_id}">
-				<td>${mygroup2.group_name}</td>
-				<td>${mygroup2.interest}</td>
-				<td>${mygroup2.address}</td>
-				<td>${mygroup2.day}</td>
-				<td>${mygroup2.state}</td>
+			<input type = hidden name = "group_id" value = "${creategroup2.group_id}">
+				<td>${creategroup2.group_name}</td>
+				<td>${creategroup2.interest}</td>
+				<td>${creategroup2.address}</td>
+				<td>${creategroup2.day}</td>
+				<td>${creategroup2.state}</td>
 				<td><input type="submit" id="pdel" class="btn btn-primary" value="삭제하기"></td>
 			</form>	
 			</tr>
@@ -189,36 +189,36 @@
 			<tr>
 			<form action="groupDrop.do" id="group_delete" method = "get">
 			<input type = hidden name = "user_id" value = "${user_id}">
-			<input type = hidden name = "group_id" value = "${mygroup0.group_id}">
-				<td>${mygroup0.group_name}</td>
-				<td>${mygroup0.interest}</td>
-				<td>${mygroup0.address}</td>
-				<td>${mygroup0.day}</td>
-				<td>${mygroup0.state}</td>
+			<input type = hidden name = "group_id" value = "${joingroup0.group_id}">
+				<td>${joingroup0.group_name}</td>
+				<td>${joingroup0.interest}</td>
+				<td>${joingroup0.address}</td>
+				<td>${joingroup0.day}</td>
+				<td>${joingroup0.state}</td>
 				<td><input type="submit" id = "pdel" class="btn btn-primary"  value="탈퇴하기"/></td>
 			</form>
 			</tr>
 			<tr>
 			<form action="groupDrop.do" id="group_delete" method = "get">
 			<input type = hidden name = "user_id" value = "${user_id}">
-			<input type = hidden name = "group_id" value = "${mygroup1.group_id}">
-				<td>${mygroup1.group_name}</td>
-				<td>${mygroup1.interest}</td>
-				<td>${mygroup1.address}</td>
-				<td>${mygroup1.day}</td>
-				<td>${mygroup1.state}</td>
+			<input type = hidden name = "group_id" value = "${joingroup1.group_id}">
+				<td>${joingroup1.group_name}</td>
+				<td>${joingroup1.interest}</td>
+				<td>${joingroup1.address}</td>
+				<td>${joingroup1.day}</td>
+				<td>${joingroup1.state}</td>
 				<td><input type="submit" id = "pdel" class="btn btn-primary"  value="탈퇴하기"/></td>
 			</form>
 			</tr>
 			<tr>
 			<form action="groupDrop.do" id="group_delete" method = "get">
 			<input type = hidden name = "user_id" value = "${user_id}">
-			<input type = hidden name = "group_id" value = "${mygroup2.group_id}">			
-				<td>${mygroup2.group_name}</td>
-				<td>${mygroup2.interest}</td>
-				<td>${mygroup2.address}</td>
-				<td>${mygroup2.day}</td>
-				<td>${mygroup2.state}</td>
+			<input type = hidden name = "group_id" value = "${joingroup2.group_id}">			
+				<td>${joingroup2.group_name}</td>
+				<td>${joingroup2.interest}</td>
+				<td>${joingroup2.address}</td>
+				<td>${joingroup2.day}</td>
+				<td>${joingroup2.state}</td>
 				<td><input type="submit" id = "pdel" class="btn btn-primary"  value="탈퇴하기"/></td>
 			</form>				
 			</tr>						
