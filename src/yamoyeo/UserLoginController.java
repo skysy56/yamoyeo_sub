@@ -32,6 +32,7 @@ public class UserLoginController {
 
 		// Output View
 		if (result.equals("로그인성공")) {
+			System.out.println("logindo2");
 			session.setAttribute("user_id", user_id);
 			request.setAttribute("error", "로그인 됐습니다.");
 
@@ -76,14 +77,25 @@ public class UserLoginController {
 			
 			return;
 		} else if (result.equals("비밀번호틀림")) {
+			System.out.println("logindo3");
 			request.setAttribute("error", "비밀번호가 틀립니다");
 			HttpUtil.forward(request, response, "/index.html");
 			return;
 		} else {
+			System.out.println("logindo4");
 			request.setAttribute("error", "아이디가 없습니다");
 			HttpUtil.forward(request, response, "/index.html");
 			return;
 		}
 
 	}
+	@RequestMapping(value = "userLogut.do")
+	public void userLogout(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		HttpUtil.forward(request, response, "/index.html");
+		
+	}
+	
 }

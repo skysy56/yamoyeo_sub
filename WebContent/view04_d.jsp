@@ -108,7 +108,7 @@
                         <li class="divider">
                         </li>
                         <li>
-                            <a href="#"><i class="glyphicon glyphicon-log-out"></i> 로그아웃</a>
+                            <a href="userLogut.do"><i class="glyphicon glyphicon-log-out"></i> 로그아웃</a>
                         </li>
                     </ul>
                 </li>
