@@ -28,6 +28,7 @@ public class UserUpdateController {
 				|| user.getSex().isEmpty() || user.getPhone().isEmpty() || user.getInterest().isEmpty()
 				|| user.getAddress().isEmpty()) {
 			request.setAttribute("error", "모든 정보를 입력해주세요");
+			request.setAttribute("user", user);
 			HttpUtil.forward(request, response, "/view07_d.jsp");
 			return;
 		}
@@ -43,8 +44,18 @@ public class UserUpdateController {
 		service.updateUser(user);
 
 		// Output View
+		request.setAttribute("user", user);
 		request.setAttribute("id", user.getUser_id());
 		HttpUtil.forward(request, response, "/view07_d.jsp");
 	}
-
+	@RequestMapping(value = "myData.do")	
+	public void myData(HttpServletRequest request, HttpServletResponse response){
+		HttpSession session = request.getSession();
+		Service service = new Service().getInstance();
+		String user_id = (String)session.getAttribute("user_id");
+		UserVO user = service.searchUser(user_id);
+		request.setAttribute("user", user);
+		HttpUtil.forward(request, response, "/view07_d.jsp");
+	}
+		
 }

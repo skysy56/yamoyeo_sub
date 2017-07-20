@@ -82,7 +82,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><font size="4px" color="#ffffff">${user_id} 회원님</font><b class="caret"></b></a>
                     <ul class="dropdown-menu" >
                         <li>
-                            <a href="view07_d.jsp" ><i class="glyphicon glyphicon-user" ></i> 마이 페이지</a>
+                            <a href="myData.do" ><i class="glyphicon glyphicon-user" ></i> 마이 페이지</a>
                         </li>
                         <li class="divider">
                         </li>

@@ -88,7 +88,7 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><font size="4px" color="#ffffff">${user_id} 회원님</font><b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="view07_d.jsp"><i class="glyphicon glyphicon-user"></i> 마이 페이지</a>
+                            <a href="myData.do"><i class="glyphicon glyphicon-user"></i> 마이 페이지</a>
                         </li>
                         <li class="divider">
                         </li>
@@ -123,13 +123,13 @@
      	 <h1>마이 페이지(회원 정보 관리)</h1><br>
 			<form action="userUpdate.do" method="post">
 				<b>I.D</b> : <input type=text id="userID" class="ui" name = "user_id" value ="${user_id}" disabled="disabled"><br/><br/>
-				<b>P.W</b> : <input type=password class="ui" name="user_pwd" value = "${user_pwd}"><br/><br/>
-				<b>이름 </b>: <input type=text name="user_name" class="ui" value = "${user_name}"><br/><br/>
+				<b>P.W</b> : <input type=password class="ui" name="user_pwd" value = "${user.user_pwd}"><br/><br/>
+				<b>이름 </b>: <input type=text name="user_name" class="ui" value = "${user.user_name}"><br/><br/>
 			
 				<b>성별</b> : <input type="radio" name="sex" value="남" checked/> <font color="#0f705d"><b>남자</b></font>
 					<input type="radio" name="sex" value="여"/> <font color="#0f705d"><b>여자</b></font>
 					<br/><br/>
-				<b>핸드폰 번호</b> : <input type=text name="phone" class="ui" value = "${phone}"/><br/><br/>
+				<b>핸드폰 번호</b> : <input type=text name="phone" class="ui" value = "${user.phone}"/><br/><br/>
 			
 				<b>관심사</b> : 
 				<input type="radio" name = "interest" value="여행"/> <font color="#0f705d"><b>여행</b></font>

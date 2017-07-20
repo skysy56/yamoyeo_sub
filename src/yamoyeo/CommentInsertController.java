@@ -20,7 +20,7 @@ public class CommentInsertController {
 		// Parameter
 		String comment_text = request.getParameter("comment_text");
 		HttpSession session = request.getSession();
-		ArrayList<CommentVO> list = null;
+		ArrayList<CommentVO> list = new ArrayList<CommentVO>();
 
 		// 유효성 검사
 		if (comment_text.isEmpty()) {
@@ -45,7 +45,7 @@ public class CommentInsertController {
 		System.out.println(comment);
 		// Output
 		request.setAttribute("group_id", request.getParameter("group_id"));
-		HttpUtil.forward(request, response, "/view04_d.jsp");
+		HttpUtil.forward(request, response, "groupSearch.do");
 
 	}
 
