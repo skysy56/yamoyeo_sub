@@ -120,7 +120,7 @@
 	</form>
 
 	
-	<form action="view08_d.jsp" method="post">
+	<form action="groupList.do" method="post">
 	<input type=submit id="groupadmin" class="btn btn-primary" value="&nbsp&nbsp&nbsp&nbsp모임 관리&nbsp&nbsp&nbsp&nbsp"/>
 	</form><p><hr><br/>
 	

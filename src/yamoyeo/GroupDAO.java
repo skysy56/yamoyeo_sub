@@ -140,14 +140,18 @@ public class GroupDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		PreparedStatement pstmt2 = null;
+		PreparedStatement pstmt3 = null;
 
 		System.out.println("group_id = " + group_id);
 		try {
 			conn = getConnection();
 
+			pstmt3 = conn.prepareStatement("delete from ya_comment where group_id = ?");
+			pstmt3.setString(1, group_id);
+			pstmt3.executeUpdate();
+			
 			pstmt2 = conn.prepareStatement("delete from ya_join where group_id = ?");
 			pstmt2.setString(1, group_id);
-
 			pstmt2.executeUpdate();
 			System.out.println("ya_join 그룹 삭제 완료 ");
 
@@ -317,7 +321,7 @@ public class GroupDAO {
 		return list;
 	}
 
-	public ArrayList<GroupVO> searchMygroup(String user_id) { 
+	public ArrayList<GroupVO> searchMygroup(String user_id) {  //내가 개설한 그룹
 
 		Connection conn = null;
 		PreparedStatement pstmt = null;
