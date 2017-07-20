@@ -46,12 +46,14 @@ public class GroupSearchController {
 		String interest = request.getParameter("interest");
 		String address = request.getParameter("address");
 		String day = request.getParameter("day");
+		String group_name = request.getParameter("group_name");
 
 		System.out.println("받아온 관심사, 지역, 요일 = " + interest + ", " + address + ", " + day);
+		System.out.println("받아온 그룹 이름 = " + group_name);
 		Service service = Service.getInstance();
-		ArrayList<GroupVO> list = service.groupSearch(interest, address, day);
+		ArrayList<GroupVO> list = service.groupSearch(interest, address, day, group_name);
 		for (int i = 0; i < list.size(); i++) {
-			request.setAttribute("group" + i, list.get(i));
+			request.setAttribute("searchgroup" + i, list.get(i));
 			request.setAttribute("searchImg"+i,"c:/logs/"+list.get(i).getImage());
 		}
 

@@ -163,7 +163,7 @@ $(document).ready(function() {
 				<input type="radio" name = "day" value="일"/><font color="#0f705d"><b> 일 </b></font>
 		</div>
 		<br>
-		<b>모임명</b><input id="group_name" type="text" class= "ui" size=20px><br><br>
+		<b>모임명</b><input name="group_name" type="text" class= "ui" size=20px><br><br>
 		<input id="group_search" class="btn btn-info" type = "submit" value = "모임 검색하기">
 	</form><br><br>
 	</div>

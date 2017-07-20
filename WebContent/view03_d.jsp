@@ -149,16 +149,16 @@ $(document).ready(function() {
 		<br><br>
 		<div>
 			<b>요일</b> : 
-				<input type="radio" name = "dday" value="월"/><font color="#0f705d"><b> 월</b></font>
-				<input type="radio" name = "dday" value="화"/> <font color="#0f705d"><b>화</b></font>
-				<input type="radio" name = "dday" value="수"/> <font color="#0f705d"><b>수	</b></font>
-				<input type="radio" name = "dday" value="목"/> <font color="#0f705d"><b>목</b></font>
-				<input type="radio" name = "dday" value="금"/> <font color="#0f705d"><b>금</b></font>
-				<input type="radio" name = "dday" value="토"/><font color="#0f705d"><b> 토</b></font>
-				<input type="radio" name = "dday" value="일"/><font color="#0f705d"><b> 일 </b></font>
+				<input type="radio" name = "day" value="월"/><font color="#0f705d"><b> 월</b></font>
+				<input type="radio" name = "day" value="화"/> <font color="#0f705d"><b>화</b></font>
+				<input type="radio" name = "day" value="수"/> <font color="#0f705d"><b>수	</b></font>
+				<input type="radio" name = "day" value="목"/> <font color="#0f705d"><b>목</b></font>
+				<input type="radio" name = "day" value="금"/> <font color="#0f705d"><b>금</b></font>
+				<input type="radio" name = "day" value="토"/><font color="#0f705d"><b> 토</b></font>
+				<input type="radio" name = "day" value="일"/><font color="#0f705d"><b> 일 </b></font>
 		</div>
 		<br>
-		<b>모임명</b><input id="group_name" type="text" class= "ui" size=20px><br><br>
+		<b>모임명</b><input name="group_name" type="text" class= "ui" size=20px><br><br>
 		<input id="group_search" class="btn btn-info" type = "submit" value = "모임 검색하기">
 	</form><br><br>
 	</div>
@@ -177,26 +177,26 @@ $(document).ready(function() {
 	<tr>
 		<td>
 			<ul style="list-style:none">
-				<li><a href="groupSearch.do?group_id=${group0.group_id}"><img src="${searchImg0}" width="200" height="200" alt=""></a></li>
-				<li> ${group0.group_name} </li>
-				<li> ${group0.interest} </li>
-				<li> ${group0.state} </li>
+				<li><a href="groupSearch.do?group_id=${searchgroup0.group_id}"><img src="${searchImg0}" width="200" height="200" alt=""></a></li>
+				<li> ${searchgroup0.group_name} </li>
+				<li> ${searchgroup0.interest} </li>
+				<li> ${searchgroup0.state} </li>
 			</ul>
 		</td>
 		<td>
 			<ul style="list-style:none">
-				<li><a href="groupSearch.do?group_id=${group1.group_id}"><img src="${searchImg1}" width="200" height="200" alt=""></a></li>
-				<li> ${group1.group_name} </li>
-				<li> ${group1.interest} </li>
-				<li> ${group1.state} </li>
+				<li><a href="groupSearch.do?group_id=${searchgroup1.group_id}"><img src="${searchImg1}" width="200" height="200" alt=""></a></li>
+				<li> ${searchgroup1.group_name} </li>
+				<li> ${searchgroup1.interest} </li>
+				<li> ${searchgroup1.state} </li>
 			</ul>
 		</td>
 		<td>
 			<ul style="list-style:none">
-				<li><a href="groupSearch.do?group_id=${group2.group_id}"><img src="${searchImg2}" width="200" height="200" alt=""></a></li>
-				<li> ${group2.group_name} </li>
-				<li> ${group2.interest} </li>
-				<li> ${group2.state} </li>
+				<li><a href="groupSearch.do?group_id=${searchgroup2.group_id}"><img src="${searchImg2}" width="200" height="200" alt=""></a></li>
+				<li> ${searchgroup2.group_name} </li>
+				<li> ${searchgroup2.interest} </li>
+				<li> ${searchgroup2.state} </li>
 			</ul>
 		</td>
 	</tr>
@@ -204,26 +204,26 @@ $(document).ready(function() {
 	<tr>
 		<td>
 			<ul style="list-style:none">
-				<li><a href="groupSearch.do?group_id=${group3.group_id}"><img src="${searchImg3}" width="200" height="200" alt=""></a></li>
-				<li> ${group3.group_name} </li>
-				<li> ${group3.interest} </li>
-				<li> ${group3.state} </li>
+				<li><a href="groupSearch.do?group_id=${searchgroup3.group_id}"><img src="${searchImg3}" width="200" height="200" alt=""></a></li>
+				<li> ${searchgroup3.group_name} </li>
+				<li> ${searchgroup3.interest} </li>
+				<li> ${searchgroup3.state} </li>
 			</ul>
 		</td>
 		<td>
 			<ul style="list-style:none">
-				<li><a href="groupSearch.do?group_id=${group4.group_id}"><img src="${searchImg4}" width="200" height="200" alt=""></a></li>
-				<li> ${group4.group_name} </li>
-				<li> ${group4.interest} </li>
-				<li> ${group4.state} </li>
+				<li><a href="groupSearch.do?group_id=${searchgroup4.group_id}"><img src="${searchImg4}" width="200" height="200" alt=""></a></li>
+				<li> ${searchgroup4.group_name} </li>
+				<li> ${searchgroup4.interest} </li>
+				<li> ${searchgroup4.state} </li>
 			</ul>
 		</td>
 		<td>
 			<ul style="list-style:none">
-				<li><a href="groupSearch.do?group_id=${group5.group_id}"><img src="${searchImg5}" width="200" height="200" alt=""></a></li>
-				<li> ${group5.group_name} </li>
-				<li> ${group5.interest} </li>
-				<li> ${group5.state} </li>
+				<li><a href="groupSearch.do?group_id=${searchgroup5.group_id}"><img src="${searchImg5}" width="200" height="200" alt=""></a></li>
+				<li> ${searchgroup5.group_name} </li>
+				<li> ${searchgroup5.interest} </li>
+				<li> ${searchgroup5.state} </li>
 			</ul>
 		</td>
 	</tr>

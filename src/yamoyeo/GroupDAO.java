@@ -12,7 +12,7 @@ public class GroupDAO {
 		Connection conn = null;
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "yaechan1092", "921021");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "scott", "tiger");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -279,18 +279,19 @@ public class GroupDAO {
 		return list;
 	}
 
-	public ArrayList<GroupVO> groupSearch(String interest, String address, String day) { // 조건 검색
+	public ArrayList<GroupVO> groupSearch(String interest, String address, String day, String group_name) { // 조건 검색
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ArrayList<GroupVO> list = new ArrayList<GroupVO>();
 		try {
 			conn = getConnection();
-			pstmt = conn.prepareStatement("select * from ya_group where interest = ? and address =? and day =?");
+			pstmt = conn.prepareStatement("select * from ya_group where (interest = ? and address =? and day =?) or (group_name like ?) ");
 
 			pstmt.setString(1, interest);
 			pstmt.setString(2, address);
 			pstmt.setString(3, day);
-			System.out.println(interest + address + day);
+			pstmt.setString(4, "%"+group_name+"%");
+			System.out.println(interest + address + day+group_name);
 			ResultSet rs = pstmt.executeQuery();
 
 			// System.out.println(rs.next());

@@ -61,8 +61,8 @@ public class Service {
       return new GroupDAO().recGroup(interest, address);
    }
    
-   public ArrayList<GroupVO> groupSearch(String interest, String address, String day){ //그룹 조건검색  GroupSearchController "searchGroup.do"
-      return new GroupDAO().groupSearch(interest, address,day);
+   public ArrayList<GroupVO> groupSearch(String interest, String address, String day, String group_name){ //그룹 조건검색  GroupSearchController "searchGroup.do"
+      return new GroupDAO().groupSearch(interest, address,day, group_name);
    }
 //   --------------Group 접근 메소드----------------------
    
